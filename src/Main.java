@@ -21,6 +21,7 @@ public class Main {
         for (i = 10; i <= 10 && i >= 1; i--) {
             System.out.print(i + " ");
         }
+
         // todo как убрать год 0?
         System.out.println();
         System.out.println("task 3");
