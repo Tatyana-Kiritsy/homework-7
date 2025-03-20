@@ -10,6 +10,7 @@ public class Main {
                     sum + " рублей.");
         }
         System.out.println("Поздравляем! У вас достаточно денег на счете!");
+
         System.out.println();
         System.out.println("task 2");
         int i = 1;
@@ -22,13 +23,12 @@ public class Main {
             System.out.print(i + " ");
         }
 
-        // todo как убрать год 0?
         System.out.println();
         System.out.println("task 3");
         int population = 12_000_000;
-        int year = 0;
-        for (; year <= 10; population = population + (population / 1000 * 17) -
-                (population / 1000 * 8), year++) {
+        int year;
+        for (year = 1; year <= 10; year++) {
+            population = population + (population / 1000 * 17) - population / 1000 * 8;
             System.out.println("Год " + year + " численность населения составляет "
                     + population);
         }
@@ -46,9 +46,11 @@ public class Main {
 
         System.out.println();
         System.out.println("task 5");
-        double save;
-        for (save = 15_000, month = 1; save <= 12_000_000; save = save + 15_000 +
-                (save + 15_000) * 0.07, month++) {
+        double save = 15_000;
+        month = 1;
+        while (save <= 12_000_000) {
+            save = save + 15_000 + (save + 15_000) * 0.07;
+            month++;
             if (month % 6 == 0) {
                 System.out.printf("Месяц %d, сумма накоплений равна %.2f рублей.\n",
                         month, save);
@@ -56,8 +58,11 @@ public class Main {
         }
         System.out.println();
         System.out.println("task 6");
-        for (save = 15_000, month = 1; month <= 9 * 12; save = save + 15_000 +
-                (save + 15_000) * 0.07, month++) {
+        month = 1;
+        save = 15_000;
+        while (month <= 9 * 12) {
+            save = save + 15_000 + (save + 15_000) * 0.07;
+            month++;
             if (month % 6 == 0) {
                 System.out.printf("Месяц %d, сумма накоплений равна %.2f рублей.\n",
                         month, save);
@@ -82,4 +87,5 @@ public class Main {
         }
     }
 }
+
 
